@@ -4,6 +4,7 @@ import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
 import AssignmentOutlinedIcon from '@mui/icons-material/AssignmentOutlined';
 import WalletOutlinedIcon from '@mui/icons-material/WalletOutlined';
 import CardGiftcardOutlinedIcon from '@mui/icons-material/CardGiftcardOutlined';
+import { Accessibility } from '@mui/icons-material';
 
 // ==============================|| UTILITIES MENU ITEMS ||============================== //
 
@@ -65,6 +66,14 @@ const utilities = {
             type: 'item',
             url: '/utils/membership',
             icon: CardGiftcardOutlinedIcon,
+            breadcrumbs: false
+        },
+        {
+            id: 'util-intro',
+            title: 'Introduction',
+            type: 'item',
+            url: '/introduction',
+            icon: Accessibility,
             breadcrumbs: false
         }
     ]

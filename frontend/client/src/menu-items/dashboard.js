@@ -13,14 +13,6 @@ const dashboard = {
     type: 'group',
     children: [
         {
-            id: 'introduction',
-            title: 'Introduction',
-            type: 'item',
-            url: '/introduction',
-            icon: icons.IconDashboard,
-            breadcrumbs: false
-        },
-        {
             id: 'default',
             title: 'Dashboard',
             type: 'item',

@@ -279,7 +279,7 @@ function Addgigs() {
                         <Grid container spacing={1} justifyContent={'center'} alignItems={'center'}>
                             <Grid item md={8} justifyContent={'center'} alignItems={'center'}>
                                 <Grid container justifyContent={'center'} marginBottom={'20px'}>
-                                    <Grid item lg={8} sm={12} xs={12} className="fileuplod-input pr-md-3 h-100">
+                                    <Grid item lg={8} sm={12} xs={12} className="fileuplod-input pr-lg-3 h-100">
                                         <input ref={inputRef} type="file" id="input-file-upload1" onChange={handleImage} multiple />
                                         <label id="label-file-upload" htmlFor="input-file-upload1" className={dragActive ? 'drag-active' : ''}>
                                             {addGigImage.length > 0 ?
@@ -313,7 +313,7 @@ function Addgigs() {
                                         )}
                                     </Grid>
 
-                                    <Grid item lg={4} sm={12} xs={12} className="fileuplod-input h-100 mt-3 mt-md-0">
+                                    <Grid item lg={4} sm={12} xs={12} className="fileuplod-input h-100 mt-3 mt-lg-0">
                                         <input ref={videoinputRef} type="file" id="input-file-upload" onChange={handlevideofile} accept=".mov,.mp4" />
                                         <label id="label-file-upload" htmlFor="input-file-upload" className={dragActive ? 'drag-active' : ''}>
 

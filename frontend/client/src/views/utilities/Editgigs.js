@@ -256,7 +256,7 @@ function Addgigs() {
                     <Grid container spacing={1} justifyContent={'center'} alignItems={'center'}>
                         <Grid item md={8} justifyContent={'center'} alignItems={'center'}>
                             <Grid container alignItems={'center'} justifyContent={'center'} marginBottom={'20px'}>
-                                <Grid item lg={8} sm={12} xs={12} className="fileuplod-input pr-md-3 h-100">
+                                <Grid item lg={8} sm={12} xs={12} className="fileuplod-input pr-lg-3 pr-0 h-100">
                                     <input ref={inputRef} type="file" id="input-file-upload" onChange={handleImage} multiple disabled={isUploadDisabled} />
                                     <label id="label-file-upload" htmlFor="input-file-upload" className={dragActive ? 'drag-active' : ''}>
                                         <div className="datafile">

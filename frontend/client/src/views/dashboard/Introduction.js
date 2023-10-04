@@ -34,17 +34,16 @@ const [baseUrl , setBaseUrl] = useState("")
             </typography>
         </div>
         <MainCard className="padding-main">
-            <Grid container spacing={1} justifyContent={'center'} alignItems={'center'}>
+            <Grid container  >
                             
 
-                <Grid item lg={5} md={6} sm={7} xs={12} justifyContent={'center'} alignItems={'center'}>
+                <Grid item lg={12} md={12} sm={12} xs={12}>
                     <div className="outer-mebreships">
-                        <div className="member-card">
-                         
-                            <p className="card-desc">
-                               {introductionData.vendor_intro}
+                        <div className='text-center'>
+                         <h3 className='mt-0 mb-3'>Introduction Content or Video</h3>
+                            <p className="mt-0 mb-4">{introductionData.vendor_intro}
                             </p>
-                            <video src={introductionData.video != null ?baseUrl+introductionData.video:""} alt="card-logo" controls height={200} width={200} />
+                            <video src={introductionData.video != null ?baseUrl+introductionData.video:""} alt="card-logo" controls width={300} />
 
                                
                         </div>
