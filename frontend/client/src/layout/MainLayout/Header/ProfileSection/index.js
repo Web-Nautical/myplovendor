@@ -8,27 +8,7 @@ let apiServices = new ApiService();
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
-import {
-    Avatar,
-    Box,
-    Card,
-    CardContent,
-    Chip,
-    ClickAwayListener,
-    Divider,
-    Grid,
-    InputAdornment,
-    List,
-    ListItemButton,
-    ListItemIcon,
-    ListItemText,
-    OutlinedInput,
-    Paper,
-    Popper,
-    Stack,
-    Switch,
-    Typography
-} from '@mui/material';
+import { Avatar, Box, Card, CardContent, Chip, ClickAwayListener, Divider, Grid, InputAdornment, List, ListItemButton, ListItemIcon, ListItemText, OutlinedInput, Paper, Popper, Stack, Switch, Typography } from '@mui/material';
 
 // third-party
 import PerfectScrollbar from 'react-perfect-scrollbar';
@@ -55,8 +35,8 @@ const ProfileSection = () => {
     const [notification, setNotification] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(-1);
     const [open, setOpen] = useState(false);
-    const [vendorData , setVendorData] = useState([])
-    const [baseUrl , setBaseUrl] = useState("")
+    const [vendorData, setVendorData] = useState([]);
+    const [baseUrl, setBaseUrl] = useState('');
     /**
      * anchorRef is used on different componets and specifying one type leads to other components throwing an error
      * */
@@ -89,20 +69,18 @@ const ProfileSection = () => {
     useEffect(() => {
         if (prevOpen.current === true && open === false) {
             anchorRef.current.focus();
-           
         }
-        apiServices.vendordataPostRequest({}).then(res => {
-          
+        apiServices.vendordataPostRequest({}).then((res) => {
             if (res.data.status == 'success') {
-                console.log("vendordata",res)
-                setVendorData(res.data.vendorData)
-                setBaseUrl(res.data.baseurl)
-            }else if(res.data.message == 'Token Expired'){
+                console.log('vendordata', res);
+                setVendorData(res.data.vendorData);
+                setBaseUrl(res.data.baseurl);
+            } else if (res.data.message == 'Token Expired') {
                 alert(res.data.message);
                 localStorage.removeItem('AUTH_TOKEN');
                 window.location.href = constant.FRONT_URL;
             }
-            })
+        });
 
         prevOpen.current = open;
     }, [open]);
@@ -110,7 +88,7 @@ const ProfileSection = () => {
     return (
         <>
             <Avatar
-                src={vendorData.image !== null ?baseUrl + vendorData.image :""}
+                src={vendorData.image !== null ? baseUrl + vendorData.image : ''}
                 sx={{
                     ...theme.typography.mediumAvatar,
                     margin: '8px 0 8px 8px !important',
@@ -158,7 +136,7 @@ const ProfileSection = () => {
                                         </Stack>
                                     </Box>
                                     <PerfectScrollbar style={{ height: '100%', maxHeight: 'calc(100vh - 250px)', overflowX: 'hidden' }}>
-                                        <Box sx={{ p: 2 }}>
+                                        <Box sx={{ p: 2 }} className="pt-0">
                                             <List
                                                 component="nav"
                                                 sx={{
@@ -174,12 +152,9 @@ const ProfileSection = () => {
                                                         mt: 0.5
                                                     }
                                                 }}
+                                                className="py-0"
                                             >
-                                                <ListItemButton
-                                                    sx={{ borderRadius: `${customization.borderRadius}px` }}
-                                                    selected={selectedIndex === 4}
-                                                    onClick={handleLogout}
-                                                >
+                                                <ListItemButton sx={{ borderRadius: `${customization.borderRadius}px` }} selected={selectedIndex === 4} onClick={handleLogout}>
                                                     <ListItemIcon>
                                                         <IconLogout stroke={1.5} size="1.3rem" />
                                                     </ListItemIcon>

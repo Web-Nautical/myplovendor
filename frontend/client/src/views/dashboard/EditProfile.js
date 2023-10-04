@@ -183,14 +183,14 @@ function EditProfile() {
                                     onClick={() => inputRef.current.click()} // Trigger file input click when the image is clicked
                                     height={150}
                                     width={150}
-                                    style={{borderRadius: '50%'}}
+                                    style={{borderRadius: "50%", objectFit: "cover"}}
                                     />:  
                                     <img
                                     src={VenderData.image?vendorUrl + VenderData.image : icon}
                                     onClick={() => inputRef.current.click()} // Trigger file input click when the image is clicked
                                     height={150}
                                     width={150}
-                                    style={{borderRadius: '50%'}}
+                                    style={{borderRadius: '50%', objectFit: "cover"}}
                                     />   
                                     }  
                                                                      

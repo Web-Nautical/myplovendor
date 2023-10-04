@@ -142,12 +142,12 @@ const NotificationSection = () => {
                         {
                             name: 'offset',
                             options: {
-                                offset: [matchesXs ? 5 : 0, 20]
+                                offset: [0, 14]
                             }
                         }
                     ]
                 }}
-                style={{top:"85px" , left:"897px" , width: "320px"
+                style={{top:"70px" , right:"15px" , left: "auto" , width: "320px"
             }}
             >
                 {({ TransitionProps }) => (

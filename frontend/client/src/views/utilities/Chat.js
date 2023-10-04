@@ -335,7 +335,7 @@ const Chat = () => {
                     :<div id="nn_chatrt" className="nn_chatrtmain">
                     <Grid justifyContent={'center'} alignItems={'center'}>
                         <Grid item md={8} justifyContent={'center'} alignItems={'center'} className="titlblanck">
-                            <p>Tap a conversation to start chatting</p>
+                            <p>Messages </p>
                         </Grid>
                     </Grid>
                     </div>

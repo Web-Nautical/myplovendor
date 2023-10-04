@@ -43,7 +43,7 @@ const [baseUrl , setBaseUrl] = useState("")
                          <h3 className='mt-0 mb-3'>Introduction Content or Video</h3>
                             <p className="mt-0 mb-4">{introductionData.vendor_intro}
                             </p>
-                            <video src={introductionData.video != null ?baseUrl+introductionData.video:""} alt="card-logo" controls width={300} />
+                            <video src={introductionData.video != null ?baseUrl+introductionData.video:""} alt="card-logo" controls className="videointro" />
 
                                
                         </div>

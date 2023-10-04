@@ -68,7 +68,7 @@ const TotalIncomeDarkCard = ({ isLoading ,vendorData, Baseurl}) => {
                                     src={vendorData.image? Baseurl+vendorData.image : avtar}
                                     height={150}
                                     width={150}
-                                    style={{borderRadius: '50%'}}
+                                    style={{borderRadius: "50%", objectFit: "cover"}} 
                                     />  
                                     <ListItemText
                                         sx={{

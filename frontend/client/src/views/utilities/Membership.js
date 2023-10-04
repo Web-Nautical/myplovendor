@@ -71,7 +71,8 @@ const Membership = () => {
                     <Grid item lg={5} md={6} sm={7} xs={12} justifyContent={'center'} alignItems={'center'}>
                         <div className="outer-mebreships">
                             <div className="member-card">
-                                <img src={vendorData.image !== null ?baseUrl+vendorData.image :logo} alt="card-logo" />
+                                <img src={vendorData.image !== null ?baseUrl+vendorData.image :logo} alt="card-logo" height={150}
+                                    width={150} style={{borderRadius: "50%", objectFit: "cover"}}  />
 
                                 <p className="card-desc">
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
