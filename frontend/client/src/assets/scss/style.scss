@@ -491,9 +491,10 @@
     font-weight: 500;
 }
 
-.css-1vpwcmr-MuiGrid-root>.MuiGrid-item {
+.css-1vpwcmr-MuiGrid-root>.MuiGrid-item, .MuiBox-root.css-1hqeloq{
     max-width: none;
     z-index: 1;
+    position: relative;
 }
 
 .CircularProgressbar .CircularProgressbar-path {
