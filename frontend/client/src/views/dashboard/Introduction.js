@@ -40,7 +40,7 @@ const [baseUrl , setBaseUrl] = useState("")
                 <Grid item lg={12} md={12} sm={12} xs={12}>
                     <div className="outer-mebreships">
                         <div className='text-center'>
-                         <h3 className='mt-0 mb-3'>Introduction Content or Video</h3>
+                         <h3 className='mt-0 mb-3 introdutitle'>Introduction Content or Video</h3>
                             <p className="mt-0 mb-4">{introductionData.vendor_intro}
                             </p>
                             <video src={introductionData.video != null ?baseUrl+introductionData.video:""} alt="card-logo" controls className="videointro" />
